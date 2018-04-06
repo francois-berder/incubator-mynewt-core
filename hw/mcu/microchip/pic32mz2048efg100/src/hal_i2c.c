@@ -36,7 +36,7 @@
 #define READ_MODE               (1)
 #define PULSE_GOBBLER_DELAY     (104)   /* In nanoseconds */
 
-static volatile uint32_t *base_address[I2C_CNT] = {
+static volatile uint32_t * const base_address[I2C_CNT] = {
     (volatile uint32_t *)_I2C1_BASE_ADDRESS,
     (volatile uint32_t *)_I2C2_BASE_ADDRESS,
     (volatile uint32_t *)_I2C3_BASE_ADDRESS,

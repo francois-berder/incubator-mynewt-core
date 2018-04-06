@@ -34,7 +34,7 @@
 #define UxRXREG(U)          (base_address[U][0x30 / 0x4])
 #define UxBRG(U)            (base_address[U][0x40 / 0x4])
 
-static volatile uint32_t* base_address[UART_CNT] = {
+static volatile uint32_t* const base_address[UART_CNT] = {
     (volatile uint32_t *)_UART1_BASE_ADDRESS,
     (volatile uint32_t *)_UART2_BASE_ADDRESS,
     (volatile uint32_t *)_UART3_BASE_ADDRESS,

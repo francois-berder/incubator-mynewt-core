@@ -62,7 +62,7 @@ struct pic32_gpio_t {
     volatile uint32_t * tris;
 };
 
-static struct pic32_gpio_t base_address[] = {
+static const struct pic32_gpio_t base_address[] = {
     {
         .gpio  = (volatile uint32_t *)_PORTA_BASE_ADDRESS,
         .ansel = (volatile uint32_t *)&ANSELA,

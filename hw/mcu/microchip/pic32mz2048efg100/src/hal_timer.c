@@ -33,7 +33,7 @@
 #define TMRx(T)         (base_address[T][0x10 / 0x4])
 #define PRx(T)          (base_address[T][0x20 / 0x4])
 
-static volatile uint32_t * base_address[PIC32MZ_TIMER_COUNT] = {
+static volatile uint32_t * const base_address[PIC32MZ_TIMER_COUNT] = {
     (volatile uint32_t *)_TMR2_BASE_ADDRESS,
     (volatile uint32_t *)_TMR3_BASE_ADDRESS,
     (volatile uint32_t *)_TMR4_BASE_ADDRESS,
@@ -44,7 +44,7 @@ static volatile uint32_t * base_address[PIC32MZ_TIMER_COUNT] = {
     (volatile uint32_t *)_TMR9_BASE_ADDRESS
 };
 
-static uint32_t timer_prescalers[PIC32MZ_PRESCALER_COUNT] =
+static const uint32_t timer_prescalers[PIC32MZ_PRESCALER_COUNT] =
 {1, 2, 4, 8, 16, 32, 64, 256};
 
 struct pic32_timer {

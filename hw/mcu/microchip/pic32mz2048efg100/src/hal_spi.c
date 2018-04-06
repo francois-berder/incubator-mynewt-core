@@ -37,7 +37,7 @@
 #define SPIxBRG(P)          (base_address[P][0x30 / 0x4])
 #define SPIxCON2(P)         (base_address[P][0x40 / 0x4])
 
-static volatile uint32_t * base_address[SPI_CNT] = {
+static volatile uint32_t * const base_address[SPI_CNT] = {
     (volatile uint32_t *)_SPI1_BASE_ADDRESS,
     (volatile uint32_t *)_SPI2_BASE_ADDRESS,
     (volatile uint32_t *)_SPI3_BASE_ADDRESS,

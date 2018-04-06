@@ -25,7 +25,7 @@
 #define PPS_BASE_ADDRESS                (0xBF801500)
 #define PPS_PORT_SPACING                (0x40)
 
-static volatile uint32_t *input_regs[4][16] = {
+static volatile uint32_t * const input_regs[4][16] = {
     {
         &INT3R,
         &T2CKR,
