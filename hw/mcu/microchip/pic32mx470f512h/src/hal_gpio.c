@@ -60,7 +60,7 @@ struct pic32_gpio_t {
     volatile uint32_t * tris;
 };
 
-static struct pic32_gpio_t base_address[] = {
+static struct pic32_gpio_t const base_address[] = {
     {
         /* No PORT A on PIC32MX470F512H */
     },
